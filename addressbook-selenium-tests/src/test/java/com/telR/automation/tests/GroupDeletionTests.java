@@ -16,6 +16,8 @@ public class GroupDeletionTests extends TestBase{
         selectGroup();
         clickOnDeleteGroupButton();
         returnToGroupsPage();
+
+        
     }
 
 }
