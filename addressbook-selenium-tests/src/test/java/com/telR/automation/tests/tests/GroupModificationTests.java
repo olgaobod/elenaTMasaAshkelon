@@ -1,5 +1,6 @@
 package com.telR.automation.tests.tests;
 
+import com.telR.automation.tests.Group;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class GroupModificationTests extends  TestBase {
 
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
-        app.getGroupHelper().fillGroupForm("ModifyGroup", "Modtest", "modtest");
+        app.getGroupHelper().fillGroupForm(new Group("ModifyGroup", "Modtest", "modtest"));
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToGroupsPage();
 

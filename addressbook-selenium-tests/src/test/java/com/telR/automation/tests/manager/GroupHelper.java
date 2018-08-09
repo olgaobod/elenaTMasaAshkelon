@@ -1,5 +1,6 @@
 package com.telR.automation.tests.manager;
 
+import com.telR.automation.tests.Group;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,10 +18,10 @@ public class GroupHelper  extends  HelperBase{
         click(By.name("submit"));
          }
 
-    public void fillGroupForm(String name, String header, String footer) {
-        type(By.name("group_name"), name);
-        type(By.name("group_header"), header);
-       type(By.name("group_footer"), footer );
+    public void fillGroupForm(Group group) {
+        type(By.name("group_name"), group.getName());
+        type(By.name("group_header"), group.getHeader());
+       type(By.name("group_footer"), group.getFooter());
 
     }
 
@@ -51,7 +52,7 @@ public class GroupHelper  extends  HelperBase{
 
     public void createGroup() {
         initGroupCreation();
-        fillGroupForm("testGroup", "test", "test");
+        fillGroupForm(new Group("testGroup", "test", "test"));
         submitGroupCreation();
         returnToGroupsPage();
     }
