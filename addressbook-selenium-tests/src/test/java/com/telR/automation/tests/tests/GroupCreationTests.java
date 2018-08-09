@@ -1,6 +1,6 @@
 package com.telR.automation.tests.tests;
 
-import com.telR.automation.tests.Group;
+import com.telR.automation.tests.Groups;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,10 @@ public class GroupCreationTests extends TestBase {
         int before = app.getGroupHelper().getGroupsCount();
 
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupForm(new Group("testGroup", "test", "test"));
+        app.getGroupHelper().fillGroupForm(new Groups()
+                .withName("testGroup")
+                .withHeader("test")
+                .withFooter("test"));
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToGroupsPage();
 
@@ -30,7 +33,9 @@ public class GroupCreationTests extends TestBase {
         int before = app.getGroupHelper().getGroupsCount();
 
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupForm(new Group("testGroupoooooooooooooooooooooo", "test", "test"));
+        app.getGroupHelper().fillGroupForm(new Groups()
+                .withHeader("testGroupoooooooooooooooooooooo")
+                .withFooter("test"));
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToGroupsPage();
 
@@ -46,7 +51,7 @@ public class GroupCreationTests extends TestBase {
 
         int before = app.getGroupHelper().getGroupsCount();
         app.getGroupHelper().initGroupCreation();
-        app.getGroupHelper().fillGroupForm(new Group("", "", ""));
+        app.getGroupHelper().fillGroupForm(new Groups());
         app.getGroupHelper().submitGroupCreation();
         app.getGroupHelper().returnToGroupsPage();
 

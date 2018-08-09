@@ -1,5 +1,6 @@
 package com.telR.automation.tests.manager;
 
+import com.telR.automation.tests.Contacts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,10 +17,11 @@ public class ContactHelper extends HelperBase {
 
 
 
-    public void fillContactForm(String firstName, String lname, String address) {
-        type(By.name("firstname"), firstName);
-        type(By.name("lastname"), lname);
-        type(By.name("address"), address);
+    public void fillContactForm(Contacts contacts) {
+        type(By.name("firstname"), contacts.getFirstName());
+        type(By.name("lastname"), contacts.getLname());
+        type(By.name("address"), contacts.getAddress());
+        type(By.name("home"), contacts.getPhone());
     }
 
       public void initContactCreation() {
@@ -49,7 +51,7 @@ public class ContactHelper extends HelperBase {
 
     public void createContact() {
         initContactCreation();
-        fillContactForm("firstName", "lname", "address");
+        fillContactForm(new Contacts("firstName", "lname", "address", "12345"));
         submitContactCreation();
 
     }
