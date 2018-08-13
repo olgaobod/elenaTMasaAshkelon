@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telR.automation.tests.tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-08-09T12:30:02" hostname="Lena-Toshiba" time="2.661">
+  <properties/>
+  <testcase name="testGroupCreation" classname="com.telR.automation.tests.tests.GroupCreationTests" time="1.206"/>
+  <testcase name="testGroupWithEmptyFieldsCreation" classname="com.telR.automation.tests.tests.GroupCreationTests" time="0.53"/>
+  <testcase name="testGroupWithLongNameCreation" classname="com.telR.automation.tests.tests.GroupCreationTests" time="0.923"/>
+  <system-out><![CDATA[count before creation is: 36 ; count after creation is: 37
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

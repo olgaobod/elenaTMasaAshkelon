@@ -1,20 +1,33 @@
 package com.telR.automation.tests;
 
 public class Contacts {
-    private final String firstName;
-    private final String lname;
-    private final String address;
-    private String phone;
+    private String firstName;
+    private String lname;
+    private String address;
+    private String homePhone;
 
-    public Contacts(String firstName, String lname, String address, String phone) {
+    public Contacts withFirstName(String firstName) {
         this.firstName = firstName;
-        this.lname = lname;
-        this.address = address;
-        this.phone = phone;
+        return this;
     }
 
-    public String getPhone() {
-        return phone;
+    public Contacts withLname(String lname) {
+        this.lname = lname;
+        return this;
+    }
+
+    public Contacts withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public Contacts withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+
+    public String getHomePhone() {
+        return homePhone;
     }
 
     public String getFirstName() {

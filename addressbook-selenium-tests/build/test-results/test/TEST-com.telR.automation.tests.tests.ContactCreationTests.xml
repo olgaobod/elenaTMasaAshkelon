@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.telR.automation.tests.tests.ContactCreationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-09T12:30:06" hostname="Lena-Toshiba" time="9.303">
+  <properties/>
+  <testcase name="testContactCreation" classname="com.telR.automation.tests.tests.ContactCreationTests" time="9.303"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
